@@ -6,20 +6,19 @@ import edu.nf.item.impl.MiPhone;
 
 /**
  * @author 0.0
- * 简单工厂
+ * 简单工厂，设置好固定的工厂，根据值来创建工厂
  */
 public class SimpleFactory {
 
     /**
-     *
      * @param name 产品的名称
      * @return
      */
-    public static Phone build(String name){
+    public static Phone build(String name) {
         Phone phone = null;
-        if("apple".equals(name)){
+        if ("apple".equals(name)) {
             phone = new ApplePhone();
-        }else if("mi".equals(name)){
+        } else if ("mi".equals(name)) {
             phone = new MiPhone();
         }
         return phone;
